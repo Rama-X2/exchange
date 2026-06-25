@@ -1,0 +1,355 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+  --color-primary: #1B1917; /* Deep Espresso Charcoal */
+  --color-primary-dark: #0F0E0D;
+  --color-primary-light: #2C2927;
+  --color-accent: #A88E75; /* Warm Bronze / Sand */
+  --color-accent-light: #EFECE5;
+  --color-bg-warm: #FAF8F5; /* Clean Linen Beige */
+  --color-bg-cream: #F4EFEA;
+  --color-text-main: #292524; /* Deep Stone */
+  --color-text-muted: #78716C;
+  --color-border: rgba(27, 25, 23, 0.08);
+}
+
+body {
+  font-family: 'Instrument Sans', sans-serif;
+  background-color: var(--color-bg-warm) !important;
+  color: var(--color-text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* Glassmorphism Header - Slim Floating Curved Style */
+.glass-header {
+  position: sticky;
+  top: 0px;
+  margin: 0px auto;
+  max-width: 100%;
+  width: 100%;
+  z-index: 50;
+  backdrop-filter: blur(20px) !important;
+  background-color: rgba(250, 248, 245, 0.85) !important; /* Semi-transparent linen */
+  border-bottom: 1px solid var(--color-border) !important;
+  box-shadow: 0 4px 30px rgba(27, 25, 23, 0.02);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Header link styling */
+.glass-header a {
+  color: var(--color-primary) !important;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.glass-header a.py-2.px-5, .glass-header a[href*="sign-in"] {
+  color: #FAF8F5 !important;
+}
+
+.glass-header a.py-2.px-5:hover, .glass-header a[href*="sign-in"]:hover {
+  color: #FFFFFF !important;
+}
+
+.glass-header a:hover {
+  color: var(--color-accent) !important;
+}
+
+.glass-header a.active-link {
+  color: var(--color-accent) !important;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+/* Floating Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Product Card Premium Styles - Frameless Style */
+.premium-card {
+  background: transparent !important;
+  border: none !important;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.premium-card-img-wrapper {
+  background-color: var(--color-bg-cream);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.premium-card:hover .premium-card-img-wrapper {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -10px rgba(27, 25, 23, 0.08);
+}
+
+/* Floating WhatsApp Widget */
+.wa-widget {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-primary);
+  color: #FAF8F5;
+  padding: 12px 22px;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px -5px rgba(27, 25, 23, 0.15);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(168, 142, 117, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wa-widget:hover {
+  transform: translateY(-3px) scale(1.02);
+  background-color: var(--color-accent);
+  color: white !important;
+}
+
+.wa-widget-badge {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  background-color: var(--color-accent);
+  color: white;
+  font-size: 9px;
+  font-weight: 800;
+  padding: 1px 5px;
+  border-radius: 10px;
+  border: 1px solid var(--color-bg-warm);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-warm);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Brand Logo Image Tile */
+img[alt*="Logo"] {
+  height: 44px !important;
+  width: 44px !important;
+  border-radius: 50% !important; /* Circle logo */
+  object-fit: cover !important;
+  border: 1px solid rgba(168, 142, 117, 0.2) !important;
+  background-color: #ffffff !important;
+}
+
+/* Tab button for FAQ/Products */
+.tab-btn {
+  font-family: 'Instrument Sans', sans-serif;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--color-border);
+  background: #ffffff;
+  color: var(--color-primary);
+}
+
+.tab-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.tab-btn.active {
+  background-color: var(--color-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 4px 15px rgba(27, 25, 23, 0.1);
+}
+
+/* Line-Only Inputs for Login & Contact Forms */
+.line-input {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1.5px solid var(--color-border) !important;
+  border-radius: 0px !important;
+  padding: 12px 0px !important;
+  color: var(--color-primary) !important;
+  font-family: 'Instrument Sans', sans-serif;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.line-input:focus {
+  border-bottom-color: var(--color-accent) !important;
+  box-shadow: none !important;
+}
+
+/* Drop Cap for Editorial Story */
+.drop-cap::first-letter {
+  font-family: 'Cinzel', serif;
+  font-size: 4rem;
+  font-weight: 600;
+  float: left;
+  line-height: 0.8;
+  margin-right: 12px;
+  color: var(--color-accent);
+}
+
+/* Premium Buttons */
+.btn-premium {
+  border-radius: 9999px;
+  padding: 12px 30px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: var(--color-primary);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-premium:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(168, 142, 117, 0.3);
+}
+
+.btn-premium-outline {
+  border-radius: 9999px;
+  padding: 12px 30px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background-color: transparent;
+  border: 1.5px solid var(--color-primary);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-premium-outline:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+/* Bento grid */
+.bento-card {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  padding: 40px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(27, 25, 23, 0.03);
+  border-color: var(--color-accent);
+}
+
+/* Premium Editorial Prose Typography */
+.prose {
+  max-width: 75ch;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8 !important;
+  color: var(--color-text-main) !important;
+  font-family: 'Instrument Sans', sans-serif;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  font-family: 'Cinzel', serif !important;
+  color: var(--color-primary) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.prose h1 {
+  font-size: 2.25rem !important;
+}
+
+.prose h2 {
+  font-size: 1.5rem !important;
+  border-bottom: 1px solid var(--color-border) !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.prose h3 {
+  font-size: 1.25rem !important;
+}
+
+.prose p {
+  margin-bottom: 1.25rem !important;
+  font-weight: 300 !important;
+}
+
+.prose ul, .prose ol {
+  margin-bottom: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+
+.prose ul {
+  list-style-type: disc !important;
+}
+
+.prose ol {
+  list-style-type: decimal !important;
+}
+
+.prose li {
+  margin-bottom: 0.5rem !important;
+  font-weight: 300 !important;
+}
+
+.prose strong {
+  font-weight: 700 !important;
+  color: var(--color-primary) !important;
+}
+
+.prose a {
+  color: var(--color-accent) !important;
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.prose a:hover {
+  color: var(--color-primary) !important;
+}

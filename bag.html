@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title -->
+  <title>Keranjang Belanja | HomeLab</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/img/Logo brand.webp">
+
+  <!-- Font & Tailwind -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="assets/css/style.css?v=16" rel="stylesheet">
+</head>
+
+<body class="bg-[#FAF9F6]">
+
+
+
+            <!-- ========== HEADER ========== -->
+    <!-- ========== HEADER ========== -->
+  <header class="glass-header w-full transition-all duration-300">
+    <div class="max-w-7xl w-full mx-auto px-4 md:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-5">
+        <!-- Left: Nav links (desktop) / Menu trigger (mobile) -->
+        <div class="flex items-center lg:w-5/12">
+          <!-- Mobile Menu Trigger -->
+          <button type="button" class="hs-collapse-toggle lg:hidden size-10 flex justify-center items-center text-sm font-semibold rounded-full border border-black/10 text-black hover:bg-black/5" id="hs-pro-hcail-collapse" aria-expanded="false" aria-controls="hs-pro-hcail" data-hs-collapse="#hs-pro-hcail">
+            <svg class="hs-collapse-open:hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" x2="21" y1="6" y2="6" />
+              <line x1="3" x2="21" y1="12" y2="12" />
+              <line x1="3" x2="21" y1="18" y2="18" />
+            </svg>
+            <svg class="hs-collapse-open:block hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
+          <!-- Desktop Nav Links (Left side) -->
+          <div class="hidden lg:flex items-center gap-x-8">
+            <a class="relative py-1 text-xs font-bold uppercase tracking-wider text-black" href="index.html" id="nav-home">Home</a>
+            <a class="relative py-1 text-xs font-bold uppercase tracking-wider text-black" href="product.html" id="nav-product">Product</a>
+            <a class="relative py-1 text-xs font-bold uppercase tracking-wider text-black" href="about-us.html" id="nav-about">Tentang Kami</a>
+          </div>
+        </div>
+
+        <!-- Center: Logo -->
+        <div class="flex justify-center lg:w-2/12 shrink-0">
+          <a class="flex items-center gap-3 focus:outline-hidden" href="index.html" aria-label="HomeLab">
+            <img class="w-10 h-10 rounded-full object-cover border border-[#A88E75]/20" src="assets/img/Logo brand.webp" alt="HomeLab Logo">
+            <span class="text-lg font-black tracking-widest text-[#1B1917] font-serif uppercase">HOMELAB</span>
+          </a>
+        </div>
+
+        <!-- Right: Nav links (desktop) + Cart & Login -->
+        <div class="flex items-center justify-end gap-x-6 lg:w-5/12">
+          <!-- Desktop Nav Links (Right side) -->
+          <div class="hidden lg:flex items-center gap-x-8 me-4">
+            <a class="relative py-1 text-xs font-bold uppercase tracking-wider text-black" href="blog.html" id="nav-blog">Blog</a>
+            <a class="relative py-1 text-xs font-bold uppercase tracking-wider text-black" href="faq.html" id="nav-faq">FAQ</a>
+            <a class="relative py-1 text-xs font-bold uppercase tracking-wider text-black" href="contact.html" id="nav-contact">Kontak</a>
+          </div>
+          
+          <!-- Actions: Cart & Sign In -->
+          <div class="flex items-center gap-3">
+            <a href="bag.html" class="size-10 relative flex justify-center items-center rounded-full bg-black/5 hover:bg-black/10 transition-all">
+              <span class="sr-only">Cart</span>
+              <svg class="shrink-0 size-4 text-[#1B1917]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="8" cy="21" r="1" />
+                <circle cx="19" cy="21" r="1" />
+                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+              </svg>
+              <span id="cart-item-count" class="absolute -top-1 -right-1 bg-[#A88E75] text-white text-[10px] font-black rounded-full size-5 flex items-center justify-center" style="display: none;">0</span>
+            </a>
+            
+            <a href="sign-in.html" class="py-2 px-5 inline-flex items-center text-xs font-bold uppercase tracking-wider rounded-full bg-[#1B1917] hover:bg-[#A88E75] text-[#FAF8F5] transition shadow-sm hover:scale-[1.02]" style="color: #FAF8F5 !important;">
+              Sign in
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Nav Menu -->
+      <div id="hs-pro-hcail" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full lg:hidden py-4 border-t border-black/5">
+        <div class="flex flex-col gap-y-4 text-xs font-bold uppercase tracking-wider text-black">
+          <a class="inline-block py-1" href="index.html" id="mob-nav-home">Home</a>
+          <a class="inline-block py-1" href="product.html" id="mob-nav-product">Product</a>
+          <a class="inline-block py-1" href="about-us.html" id="mob-nav-about">Tentang Kami</a>
+          <a class="inline-block py-1" href="blog.html" id="mob-nav-blog">Blog</a>
+          <a class="inline-block py-1" href="faq.html" id="mob-nav-faq">FAQ</a>
+          <a class="inline-block py-1" href="contact.html" id="mob-nav-contact">Kontak</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ========== END HEADER ========== -->
+  <!-- ========== END HEADER ========== -->
+<main id="content">
+    <div class="max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20 mx-auto">
+      <!-- Title -->
+      <div class="mb-10 text-center max-w-xl mx-auto space-y-3">
+        <span class="inline-flex items-center gap-x-1.5 py-1 px-3 rounded-full bg-[#A88E75]/10 border border-[#A88E75]/20 text-[#A88E75] text-xs font-bold uppercase tracking-wider">Shopping Cart</span>
+        <h1 class="font-black text-[#1C2B1E] text-4xl font-serif">Keranjang Belanja</h1>
+        <p class="text-xs text-[#5C6E5E]">Periksa kembali daftar pilihan kebaikan alami HomeLab Anda sebelum melakukan pembayaran.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <!-- Kolom Kiri: Shopping Cart Items (lebar 7/12) -->
+        <div class="lg:col-span-7 space-y-4" id="cart-items-list">
+          <!-- Items will be injected here dynamically -->
+        </div>
+
+        <!-- Kolom Kanan: Order Summary Sticky Card (lebar 5/12) -->
+        <div class="lg:col-span-5 sticky top-6">
+          <div class="bg-[#F4EFEA] text-[#1B1917] border border-[#A88E75]/20 rounded-[32px] p-8 shadow-xs space-y-6">
+            <h2 class="text-xl font-bold font-serif text-[#1B1917] pb-4 border-b border-[#A88E75]/10">Ringkasan Pesanan</h2>
+            
+            <div class="space-y-4 text-sm text-stone-600">
+              <div class="flex justify-between items-center">
+                <span>Subtotal Produk</span>
+                <span class="font-bold text-[#1B1917]" id="cart-subtotal">Rp 0</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span>Estimasi Ongkos Kirim</span>
+                <span class="font-bold text-[#1B1917]" id="cart-shipping">Rp 0</span>
+              </div>
+              <div class="flex justify-between items-center pb-4 border-b border-[#A88E75]/10">
+                <span>Pajak (PPN 10%)</span>
+                <span class="font-bold text-[#1B1917]" id="cart-tax">Rp 0</span>
+              </div>
+              
+              <!-- Total -->
+              <div class="pt-2 flex justify-between items-center">
+                <span class="text-base font-bold text-[#1B1917]">Total Bayar:</span>
+                <span class="text-2xl font-black text-[#A88E75]" id="cart-total">Rp 0</span>
+              </div>
+            </div>
+
+            <!-- Promo Code Input -->
+            <div class="pt-2">
+              <div class="flex gap-x-2">
+                <input type="text" placeholder="Kode Promo" class="py-2.5 px-4 block w-full bg-white border border-[#A88E75]/20 rounded-xl text-xs text-[#1B1917] placeholder-stone-400 focus:border-[#A88E75] focus:ring-[#A88E75] transition-all">
+                <button type="button" class="py-2.5 px-4 text-xs font-bold rounded-xl bg-[#1B1917]/5 hover:bg-[#1B1917]/10 text-[#1B1917] transition-all">Gunakan</button>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="space-y-3 pt-4">
+              <a href="checkout.html" id="checkout-btn-element" class="w-full btn-premium">
+                Lanjutkan ke Pembayaran
+              </a>
+              <a class="w-full btn-premium-outline text-center" href="product.html">
+                Lanjutkan Belanja
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+            <!-- ========== FOOTER ========== -->
+    <!-- ========== FOOTER ========== -->
+  <footer class="bg-[#1B1917] text-[#FAF8F5] border-t border-[#A88E75]/10 py-16 mt-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+        <!-- Kolom 1: Brand Info (lebar 4/12) -->
+        <div class="md:col-span-4 space-y-5">
+          <div class="flex items-center gap-3">
+            <img class="h-10 w-10 rounded-full object-cover border border-[#A88E75]/20" src="assets/img/Logo brand.webp" alt="HomeLab Logo">
+            <span class="text-xl font-bold font-serif text-[#A88E75] tracking-widest uppercase">HOMELAB</span>
+          </div>
+          <p class="text-xs text-stone-400 max-w-sm leading-relaxed">
+            Menyajikan kebaikan alami premium di setiap gelas minuman harian Anda. Menggunakan bahan berkualitas tinggi tanpa pewarna dan pengawet buatan.
+          </p>
+          <div class="pt-2 text-[10px] text-stone-500 space-y-1 uppercase font-bold tracking-wider">
+            <p>PIRT No. 513127501000326</p>
+            <p>Halal Certified Resmi</p>
+          </div>
+        </div>
+
+        <!-- Kolom 2: Quick Links (lebar 2/12) -->
+        <div class="md:col-span-2 space-y-4">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#A88E75]">Menu</h4>
+          <ul class="space-y-2.5 text-xs text-stone-300">
+            <li><a href="index.html" class="hover:text-[#A88E75] transition-colors">Home</a></li>
+            <li><a href="product.html" class="hover:text-[#A88E75] transition-colors">Product</a></li>
+            <li><a href="about-us.html" class="hover:text-[#A88E75] transition-colors">Tentang Kami</a></li>
+            <li><a href="blog.html" class="hover:text-[#A88E75] transition-colors">Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3: Toko & Jam Operasional (lebar 3/12) -->
+        <div class="md:col-span-3 space-y-4">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#A88E75]">Toko Fisik & Layanan</h4>
+          <div class="space-y-2 text-xs text-stone-300">
+            <p class="leading-relaxed">Desa Sukadamai, Kec. Cicantayan, Kab. Sukabumi, Prov Jawa Barat.</p>
+            <p class="pt-2 text-stone-400">Jam Operasional:</p>
+            <p>Senin - Minggu: 09:00 - 21:00 WIB</p>
+          </div>
+        </div>
+
+        <!-- Kolom 4: Newsletter (lebar 3/12) -->
+        <div class="md:col-span-3 space-y-4">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-[#A88E75]">Berlangganan</h4>
+          <p class="text-xs text-stone-400 leading-relaxed">
+            Dapatkan info penawaran menarik, resep matcha, dan rasa bubuk premium baru.
+          </p>
+          <div class="flex gap-x-2">
+            <input type="email" placeholder="Email Anda" class="py-2.5 px-4 block w-full bg-white/5 border border-stone-800 rounded-xl text-xs text-white placeholder-stone-500 focus:border-[#A88E75] focus:ring-[#A88E75]">
+            <button type="button" class="py-2.5 px-4 text-xs font-bold uppercase tracking-wider rounded-xl bg-[#A88E75] hover:bg-[#FAF8F5] hover:text-[#1B1917] text-white transition-all">Daftar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center text-xs text-stone-500 gap-4">
+        <p>Copyright &copy; 2026 Rama-X2. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="privacy-policy.html" class="hover:text-white">Kebijakan Privasi</a>
+          <a href="terms-and-conditions.html" class="hover:text-white">Syarat & Ketentuan</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ========== END FOOTER ========== -->
+  <!-- ========== END FOOTER ========== -->
+<!-- JS Implementing Plugins -->
+
+  <!-- JS PLUGINS -->
+  <!-- Required plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/preline/dist/index.js"></script>
+
+  <!-- JS THIRD PARTY PLUGINS -->
+  <!-- Google Analytics. Global site tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-B73TDMXKF5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-B73TDMXKF5');
+  </script>
+
+  <script src="assets/js/script.js?v=16"></script> <!-- Pastikan script.js?v=16 dimuat sebelum script ini -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const cartListContainer = document.getElementById('cart-items-list');
+        const cartSubtotalElement = document.getElementById('cart-subtotal');
+        const cartShippingElement = document.getElementById('cart-shipping');
+        const cartTaxElement = document.getElementById('cart-tax');
+        const cartTotalElement = document.getElementById('cart-total');
+        const checkoutButton = document.getElementById('checkout-btn-element');
+
+        function renderCart() {
+            // Ambil data keranjang terbaru dari global `cart` di script.js?v=16
+            const currentCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
+
+            cartListContainer.innerHTML = ''; // Clear existing items
+            let subtotal = 0;
+
+            if (currentCart.length === 0) {
+                cartListContainer.innerHTML = '<div class="p-8 text-center text-gray-500 bg-white border border-[#EAE3D2] rounded-3xl shadow-xs">Keranjang belanja Anda kosong.</div>';
+                if (checkoutButton) {
+                    checkoutButton.classList.add('disabled:opacity-50', 'disabled:pointer-events-none');
+                    checkoutButton.setAttribute('aria-disabled', 'true');
+                }
+            } else {
+                if (checkoutButton) {
+                    checkoutButton.classList.remove('disabled:opacity-50', 'disabled:pointer-events-none');
+                    checkoutButton.removeAttribute('aria-disabled');
+                }
+
+                currentCart.forEach(item => {
+                    const itemTotal = item.price * item.quantity;
+                    subtotal += itemTotal;
+
+                    const itemCard = `
+                        <div class="flex flex-col sm:flex-row items-center justify-between py-6 bg-transparent border-b border-stone-200 gap-4 transition-all duration-300">
+                            <!-- Info Produk -->
+                            <div class="flex items-center w-full sm:w-auto">
+                                <div class="size-24 rounded-2xl bg-[#F4EFEA] border border-stone-200/50 flex items-center justify-center me-6 shrink-0 shadow-xs overflow-hidden">
+                                    <img class="w-full h-full object-cover" src="${item.image}" alt="${item.name}">
+                                </div>
+                                <div class="space-y-1">
+                                    <span class="text-[9px] font-bold bg-[#A88E75]/10 text-[#A88E75] py-1 px-3 rounded-full uppercase tracking-wider">${item.category || 'Bubuk Minuman'}</span>
+                                    <h3 class="text-base font-bold text-[#1B1917] font-serif">${item.name}</h3>
+                                    <p class="text-xs text-stone-500">Notes: ${item.tastingNotes}</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Detail Kuantitas & Harga -->
+                            <div class="flex items-center justify-between w-full sm:w-auto gap-6 border-t sm:border-t-0 pt-4 sm:pt-0 border-stone-200/30">
+                                <div class="text-left sm:text-right">
+                                    <span class="text-[9px] text-stone-400 block sm:hidden">Harga Satuan</span>
+                                    <span class="text-xs font-semibold text-stone-600">Rp ${item.price.toLocaleString("id-ID")}</span>
+                                </div>
+                                
+                                <!-- Quantity Control -->
+                                <div class="flex items-center border border-stone-300 rounded-full bg-white px-2">
+                                    <button type="button" class="quantity-dec-btn size-7 text-stone-600 font-bold" data-product-id="${item.id}">-</button>
+                                    <input type="number" value="${item.quantity}" min="1" data-product-id="${item.id}" readonly
+                                           class="quantity-input py-1 w-10 text-center border-none font-bold text-xs bg-transparent text-[#1B1917] focus:ring-0">
+                                    <button type="button" class="quantity-inc-btn size-7 text-stone-600 font-bold" data-product-id="${item.id}">+</button>
+                                </div>
+
+                                <div class="text-right">
+                                    <span class="text-[9px] text-stone-400 block sm:hidden">Total</span>
+                                    <span class="text-sm font-bold text-[#1B1917]">Rp ${itemTotal.toLocaleString("id-ID")}</span>
+                                </div>
+
+                                <button type="button" data-product-id="${item.id}" class="remove-item-btn p-2 text-stone-400 hover:text-red-600 hover:bg-red-50 rounded-full transition-colors cursor-pointer">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="m19 6-2 14H7L5 20"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                    cartListContainer.insertAdjacentHTML('beforeend', itemCard);
+                });
+            }
+
+            // Calculate totals
+            const shippingCost = currentCart.length > 0 ? 15000 : 0; 
+            const taxRate = 0.10; // 10% tax
+            const tax = subtotal * taxRate;
+            const total = subtotal + shippingCost + tax;
+
+            cartSubtotalElement.textContent = `Rp ${subtotal.toLocaleString("id-ID")}`;
+            cartShippingElement.textContent = `Rp ${shippingCost.toLocaleString("id-ID")}`;
+            cartTaxElement.textContent = `Rp ${tax.toLocaleString("id-ID")}`;
+            cartTotalElement.textContent = `Rp ${total.toLocaleString("id-ID")}`;
+
+            // Add event listeners for plus/minus buttons
+            document.querySelectorAll('.quantity-dec-btn').forEach(btn => {
+                btn.addEventListener('click', (event) => {
+                    const productId = btn.dataset.productId;
+                    const item = currentCart.find(i => i.id === productId);
+                    if (item && item.quantity > 1) {
+                        updateCartItemQuantity(productId, item.quantity - 1);
+                        renderCart();
+                    }
+                });
+            });
+
+            document.querySelectorAll('.quantity-inc-btn').forEach(btn => {
+                btn.addEventListener('click', (event) => {
+                    const productId = btn.dataset.productId;
+                    const item = currentCart.find(i => i.id === productId);
+                    if (item) {
+                        updateCartItemQuantity(productId, item.quantity + 1);
+                        renderCart();
+                    }
+                });
+            });
+
+            document.querySelectorAll('.remove-item-btn').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const btn = event.target.closest('button');
+                    const productId = btn.dataset.productId;
+                    removeFromCart(productId);
+                    renderCart();
+                });
+            });
+        }
+
+        // Panggil renderCart saat halaman dimuat
+        renderCart();
+        window.addEventListener('cartUpdated', renderCart);
+    });
+</script>
+
+  <!-- Floating WhatsApp Widget -->
+  <a href="https://wa.me/6285795185561?text=Halo%20HomeLab,%20saya%20tertarik%20dengan%20produk%20Anda" class="wa-widget" target="_blank" rel="noopener noreferrer">
+    <span class="wa-widget-badge">1</span>
+    <svg class="w-5 h-5 fill-current text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.197 1.45 4.793 1.45 5.534 0 10.038-4.502 10.04-10.042.002-2.684-1.038-5.207-2.93-7.099-1.89-1.891-4.41-2.93-7.097-2.931-5.54 0-10.048 4.508-10.05 10.05-.001 1.748.459 3.4 1.332 4.907l-.982 3.58 3.692-.966zm11.442-4.702c-.3-.149-1.772-.875-2.046-.975-.276-.102-.476-.15-.676.149-.198.3-.778 1.001-.95 1.199-.173.199-.347.225-.647.075-.3-.15-1.266-.467-2.41-1.485-.89-.795-1.49-1.777-1.665-2.076-.173-.3-.018-.462.13-.61.137-.133.3-.35.45-.525.15-.175.2-.299.3-.5.1-.199.05-.375-.025-.524-.075-.15-.676-1.627-.925-2.227-.243-.584-.489-.505-.676-.514-.175-.008-.375-.01-.575-.01-.2 0-.524.075-.798.375-.276.3-1.05 1.026-1.05 2.5 0 1.475 1.074 2.9 1.223 3.1.15.199 2.113 3.227 5.12 4.526.715.309 1.273.493 1.708.632.718.228 1.37.196 1.884.119.574-.085 1.771-.724 2.022-1.424.25-.699.25-1.299.175-1.424-.076-.125-.276-.199-.575-.35z"/>
+    </svg>
+    Chat dengan Kami
+  </a>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const path = window.location.pathname.split("/").pop() || "index.html";
+      const navLinks = {
+        "index.html": "nav-home",
+        "product.html": "nav-product",
+        "product-detail.html": "nav-product",
+        "blog.html": "nav-blog",
+        "blog-detail.html": "nav-blog",
+        "faq.html": "nav-faq",
+        "contact.html": "nav-contact",
+        "about-us.html": "nav-about"
+      };
+      const activeId = navLinks[path];
+      if (activeId) {
+        const activeLink = document.getElementById(activeId);
+        if (activeLink) {
+          activeLink.classList.add("active-link");
+        }
+      }
+    });
+  </script>
+</body>
+</html>
