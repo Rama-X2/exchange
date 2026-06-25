@@ -13,7 +13,7 @@
 
   <!-- Font & Tailwind -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link href="assets/css/style.css?v=16" rel="stylesheet">
+  <link href="assets/css/style.css?v=20" rel="stylesheet">
 </head>
 
 <body class="bg-[#FAF9F6]">
@@ -248,7 +248,7 @@
     gtag('config', 'G-B73TDMXKF5');
   </script>
 
-  <script src="assets/js/script.js?v=16"></script> <!-- Pastikan script.js?v=16 dimuat sebelum script ini -->
+  <script src="assets/js/script.js?v=20"></script> <!-- Pastikan script.js?v=20 dimuat sebelum script ini -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
         const cartListContainer = document.getElementById('cart-items-list');
@@ -259,7 +259,7 @@
         const checkoutButton = document.getElementById('checkout-btn-element');
 
         function renderCart() {
-            // Ambil data keranjang terbaru dari global `cart` di script.js?v=16
+            // Ambil data keranjang terbaru dari global `cart` di script.js?v=20
             const currentCart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
 
             cartListContainer.innerHTML = ''; // Clear existing items
